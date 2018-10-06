@@ -23,7 +23,7 @@ def print_number2(numb):   # второй вариант решения
         print(i)
 
 
-def print_number3(numb):   # второй вариант решения
+def print_number3(numb):   # третий вариант решения
     a = int(numb)
     while a > 0:
         print(a % 10)
