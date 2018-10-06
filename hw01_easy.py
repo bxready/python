@@ -11,25 +11,34 @@ __author__ = 'Коваленко Алексей Иванович'
 import random
 
 
-def print_number(number):   # первый вариант решения
-    a = list(str(number))
-    while (len(a) > 0):
+def print_number(numb):   # первый вариант решения
+    a = list(str(numb))
+    while len(a) > 0:
         print(a.pop())
 
 
-def print_number2(number):   # второй вариант решения
-    a = str(number)
+def print_number2(numb):   # второй вариант решения
+    a = str(numb)
     for i in a:
         print(i)
 
 
-number = random.randint(100, 99999)
+def print_number3(numb):   # второй вариант решения
+    a = int(numb)
+    while a > 0:
+        print(a % 10)
+        a //= 10
+
+
+numb = random.randint(100, 99999)
 print("*** число ***")
-print(number)
+print(numb)
 print("*** 1 вариант решения ***")
-print_number2(number);
+print_number2(numb)
 print("*** 2 вариант решения ***")
-print_number(number);
+print_number(numb)
+print("*** 3 вариант решения только арифметические операции***")
+print_number3(numb)
 
 # Задача-2: Исходные значения двух переменных запросить у пользователя.
 # Поменять значения переменных местами. Вывести новые значения на экран.
@@ -38,6 +47,7 @@ print_number(number);
 #   или через арифметические действия
 # Не нужно решать задачу так:
 # print("a = ", b, "b = ", a) - это неправильное решение!
+
 
 def exchange():
     a = input('Введите первое число a: ')
@@ -61,9 +71,9 @@ exchange()
 def user_confirm():
     a = input('Введите ваш возраст: ')
     a = int(a)
-    if (a < 18):
+    if a < 18:
         print("Извините, пользование данным ресурсом только с 18 лет")
-    elif (a > 100):
+    elif a > 100:
         print("Не верю")
     else:
         print('Досутп разрешен')
