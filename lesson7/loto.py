@@ -189,9 +189,9 @@ class game:
 
         step = input('Зачеркнуть цифру? (y/n)')
         if (step.lower() == 'y' and not n in self.cards.cards[1]['numbers']):
-            self.stop(False)
+            self.stop(0)
         if (step.lower() == 'n' and n in self.cards.cards[1]['numbers']):
-            self.stop(False)
+            self.stop(0)
 
         self.redraw(n)
 
